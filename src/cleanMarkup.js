@@ -15,7 +15,7 @@ export async function cleanMarkup (html) {
 
   html = html.normalize('NFC') // normalize unicode
 
-  html = twemoji.parse(html, { ext: '.svg', folder: 'svg' })
+  html = twemoji.parse(html, { base: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/', ext: '.svg', folder: 'svg' })
 
   // replace HTML entities with decimal entities
   /* eslint-disable no-control-regex */
